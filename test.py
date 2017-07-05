@@ -5,5 +5,5 @@ try:
     print x
 except Exception, e:
     print e
-finally:
+else:
     del a,b,x
