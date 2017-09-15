@@ -3,7 +3,9 @@
 #         for linux system                     #
 #         version 1.0                          #
 #         create by wonder                     #
-#         2017-09-15                           #
+#         2017-09-15                           # 
+#         linux:echo -n                        #
+#                                              #
 ################################################
 
 #judgement the parameters number
