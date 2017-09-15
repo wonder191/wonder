@@ -6,7 +6,7 @@
 #         2017-09-15                           #
 ################################################
 
-#judge the parameters number
+#judgement the parameters number
 if [[ $# < 1 ]] || [[ $# > 2 ]] ;then
     echo ""
     echo "Warnning: Must have one or two parameter!"
@@ -25,7 +25,7 @@ else
 if [[ $# -eq 1 ]];then
 
     linecount=`cat $1 | awk '{num=length($0);if (num>max) max=num}END{print max}'`
-    rownumlen=`cat $1|wc -l|awk '{print length($0)}'`
+    rownumlen=`cat $1| wc |awk '{print $1}'|awk '{print length($0)}'`
     headcount=$((linecount+rownumlen+7))
     printhead_withrn()
     {
@@ -52,7 +52,7 @@ fi
 #two parameters to give, if not the define parameter then warnning
 if [[ $2 = "--withnorn" ]];then
     linecount=`cat $1 | awk '{num=length($0);if (num>max) max=num}END{print max}'`
-    rownumlen=`cat $1|wc -l|awk '{print length($0)}'`
+    rownumlen=`cat $1| wc |awk '{print $1}'|awk '{print length($0)}'`
     headcount=$((linecount+4))
     printhead_withoutrn()
     {
