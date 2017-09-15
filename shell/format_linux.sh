@@ -1,6 +1,6 @@
 ################################################
 #                                              #
-#         for linux                            #
+#         for linux system                     #
 #         version 1.0                          #
 #         create by wonder                     #
 #         2017-09-15                           #
@@ -41,7 +41,7 @@ if [[ $# -eq 1 ]];then
                 echo -n "-"
             fi
             (( i=i+1 ))
-         done
+        done
 }
     printhead_withrn
     cat $1 | awk '{printf "| %-'$rownumlen's ""| %-'$linecount's |\n",NR,$0}'
